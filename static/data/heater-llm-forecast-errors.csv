@@ -1,0 +1,9 @@
+who,run,rmse
+104 model,1,0.525
+physics-shaped model,1,0.105
+"Claude, readings only",1,0.662
+"Claude, readings only",2,0.178
+"Claude, readings only",3,0.164
+"Claude, with the log",1,0.152
+"Claude, with the log",2,1.282
+"Claude, with the log",3,0.066

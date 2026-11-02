@@ -1,0 +1,29 @@
+outside_c,door,controller,heater_steps,readings_short,degree_steps_short
+3,no,"thermostat, no lead",29.8,15.03,27.84
+3,no,"thermostat, lead tuned for 5",34.1,4.59,2.00
+3,no,"thermostat, lead tuned for 3",36.7,0.06,0.01
+3,no,"planner, physics-shaped model",35.5,1.31,0.27
+3,no,"planner, 104 model",35.4,1.45,0.33
+3,yes,"thermostat, no lead",32.5,21.98,84.67
+3,yes,"thermostat, lead tuned for 5",35.3,18.13,69.28
+3,yes,"thermostat, lead tuned for 3",37.1,15.87,65.89
+3,yes,"planner, physics-shaped model",36.8,16.34,66.24
+3,yes,"planner, 104 model",36.6,16.45,66.56
+5,no,"thermostat, no lead",27.2,9.72,18.37
+5,no,"thermostat, lead tuned for 5",31.0,0.07,0.01
+5,no,"planner, physics-shaped model",30.7,0.20,0.02
+5,no,"planner, 104 model",30.1,0.48,0.07
+5,yes,"thermostat, no lead",30.3,18.09,57.34
+5,yes,"thermostat, lead tuned for 5",33.4,12.80,43.26
+5,yes,"planner, physics-shaped model",33.7,12.54,42.88
+5,yes,"planner, 104 model",33.0,12.99,43.64
+8,no,"thermostat, no lead",21.1,6.26,12.05
+8,no,"thermostat, lead tuned for 5",24.6,0.01,0.00
+8,no,"thermostat, lead tuned for 8",23.4,0.04,0.00
+8,no,"planner, physics-shaped model",22.8,0.10,0.01
+8,no,"planner, 104 model",22.1,0.29,0.03
+8,yes,"thermostat, no lead",25.2,10.39,30.14
+8,yes,"thermostat, lead tuned for 5",28.7,6.29,19.45
+8,yes,"thermostat, lead tuned for 8",27.4,6.45,19.94
+8,yes,"planner, physics-shaped model",27.1,6.61,20.02
+8,yes,"planner, 104 model",26.4,6.95,20.46

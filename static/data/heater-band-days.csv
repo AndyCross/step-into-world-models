@@ -1,0 +1,25 @@
+day,outside_c,door,controller,heater_steps,readings_short,degree_steps_short
+evening,3,no,"thermostat, lead tuned for 3",36.7,0.06,0.01
+evening,3,no,"planner, one model",35.5,1.31,0.27
+evening,3,no,"planner, half a degree of margin",36.9,0.38,0.06
+evening,3,no,"planner, the band",35.8,1.09,0.22
+evening,3,yes,"thermostat, lead tuned for 3",37.1,15.87,65.89
+evening,3,yes,"planner, one model",36.8,16.34,66.24
+evening,3,yes,"planner, half a degree of margin",37.6,15.72,65.20
+evening,3,yes,"planner, the band",37.0,16.07,65.99
+evening,5,no,"thermostat, lead tuned for 5",31.0,0.07,0.01
+evening,5,no,"planner, one model",30.7,0.20,0.02
+evening,5,no,"planner, half a degree of margin",32.4,0.01,0.00
+evening,5,no,"planner, the band",31.2,0.16,0.02
+evening,5,yes,"thermostat, lead tuned for 5",33.4,12.80,43.26
+evening,5,yes,"planner, one model",33.7,12.54,42.88
+evening,5,yes,"planner, half a degree of margin",34.9,12.10,41.82
+evening,5,yes,"planner, the band",34.0,12.37,42.57
+evening,8,no,"thermostat, lead tuned for 8",23.4,0.04,0.00
+evening,8,no,"planner, one model",22.8,0.10,0.01
+evening,8,no,"planner, half a degree of margin",24.4,0.00,0.00
+evening,8,no,"planner, the band",23.1,0.04,0.00
+evening,8,yes,"thermostat, lead tuned for 8",27.4,6.45,19.94
+evening,8,yes,"planner, one model",27.1,6.61,20.02
+evening,8,yes,"planner, half a degree of margin",28.5,6.26,19.49
+evening,8,yes,"planner, the band",27.2,6.58,20.13

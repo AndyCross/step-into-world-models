@@ -1,0 +1,5 @@
+model,heater_steps,schedule,model_low_c,real_low_c,safe_in_200
+"true constants",15,00000111111111111111,12.10,12.08,125
+"physics-shaped, one model",16,00001111111111111111,12.37,13.00,200
+"band, coldest of eight",16,00001111111111111111,12.42,13.00,200
+"band, mean of eight",15,00000111111111111111,12.38,12.08,125

@@ -1,0 +1,8 @@
+detector,threshold
+one reading,3.251
+running sum,8.295
+leak below,0.0679
+fault_at,120
+ordinary_rings,-1
+stuck_rings,128
+dead_rings,137

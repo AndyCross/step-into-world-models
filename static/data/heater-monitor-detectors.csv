@@ -1,0 +1,8 @@
+detector,threshold,ordinary_days_rang,dead_found,dead_median_steps,stuck_found,stuck_median_steps,window_found,window_median_steps
+"one reading",3.251,12,5,1,78,73,9,1
+"running sum, slack 0.1",14.424,4,199,21,5,91,199,40
+"running sum, slack 0.2",7.180,4,199,16,9,96,199,28
+"running sum, slack 0.4",2.851,12,198,13,88,69,167,32
+"running sum, slack 0.2, field frozen",68.003,5,200,61,51,91,200,89
+"leak too low",0.032,12,0,,169,13,0,
+"running sum or leak too low",1.000,8,199,17,169,13,199,34

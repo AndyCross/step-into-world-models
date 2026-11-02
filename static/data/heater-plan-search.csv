@@ -1,0 +1,9 @@
+method,setting,schedules_tried,feasible_in_100,found_16_in_100,ms_per_plan
+every schedule,,1048576,100,100,988
+random shooting,100 schedules,100,4,3,0.1
+random shooting,1000 schedules,1000,39,12,0.7
+random shooting,10000 schedules,10000,100,69,6.4
+random shooting,100000 schedules,100000,100,100,65.0
+cross-entropy,100 x 6 rounds,600,100,98,0.46
+cross-entropy,200 x 6 rounds,1200,100,100,0.81
+cross-entropy,200 x 10 rounds,2000,100,100,1.18
