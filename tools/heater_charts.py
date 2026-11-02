@@ -252,7 +252,7 @@ def chart_door_loss():
         return T + ph - v / vmax * ph
 
     o = [svg_open(H, "Mean squared error while training the latent model, three thousand epochs",
-                  f"One line falling from 0.48 to {loss[-1]:.2f}, settling on a dashed line at {late:.2f}, the floor for a model that learns of the door one step late. Two more dashed lines: {four:.2f}, where the four-weight model stopped, and {logged:.2f}, the floor for a model that could see the door.")]
+                  f"One line falling from 0.48 to {loss[-1]:.2f}, settling on a dashed line at {late:.2f}, the loss of the same model told the door one step late. Two more dashed lines: {four:.2f}, where the four-weight model stopped, and {logged:.2f}, the floor for a model that could see the door.")]
     for tv in (0, 0.1, 0.2, 0.3, 0.4, 0.5):
         y = Y(tv)
         o.append(f'<line x1="{L}" y1="{y:.1f}" x2="{L + pw}" y2="{y:.1f}" stroke="{GRID}" stroke-width="1"/>')

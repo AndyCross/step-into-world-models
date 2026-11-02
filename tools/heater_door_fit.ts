@@ -235,6 +235,15 @@ console.log("loss trace", [0, 99, 499, 999, 1999, 2999].map(i => `${i + 1}:${lat
   for (const episode of log) { let prev = 0; for (const t of episode) { const d = doorTrace[i++] ? 1 : 0; const y = t.nextState.roomTemp - t.state.roomTemp; const p = (dd: number) => feats(t, dd).reduce((s, v, j) => s + v * w[j], 0); now += (p(d) - y) ** 2; late += (p(prev) - y) ** 2; prev = d; } }
   console.log("floor if the door were logged:", (now / rows.length).toFixed(4), " floor if it were logged one step late:", (late / rows.length).toFixed(4));
   console.log("  (the logged-door fit: closed leak", (-w[0]).toFixed(3), "open adds", (-w[4]).toFixed(3) + ")");
+  // The one-step-late line is a reference, not a floor: a model that knows the door a step
+  // late can hedge for the chance it has moved since (1 in 8 while open, 1 in 25 while shut),
+  // or be refitted on the late door state, and both score lower.
+  let hedged = 0, surprise = 0, moves = 0; i = 0;
+  const A2 = Array.from({ length: 7 }, () => Array(7).fill(0)), b2 = Array(7).fill(0);
+  for (const episode of log) { let prev = 0; for (const t of episode) { const d = doorTrace[i++] ? 1 : 0; const y = t.nextState.roomTemp - t.state.roomTemp; const x = feats(t, prev); hedged += (feats(t, prev ? 7 / 8 : 1 / 25).reduce((s, v, j) => s + v * w[j], 0) - y) ** 2; if (d !== prev) { moves++; surprise += (x.reduce((s, v, j) => s + v * w[j], 0) - y) ** 2; } for (let a = 0; a < 7; a++) { b2[a] += x[a] * y; for (let c = 0; c < 7; c++) A2[a][c] += x[a] * x[c]; } prev = d; } }
+  const w2 = solve(A2, b2); let refit = 0; i = 0;
+  for (const episode of log) { let prev = 0; for (const t of episode) { const d = doorTrace[i++] ? 1 : 0; refit += (feats(t, prev).reduce((s, v, j) => s + v * w2[j], 0) - (t.nextState.roomTemp - t.state.roomTemp)) ** 2; prev = d; } }
+  console.log("  one step late, hedged:", (hedged / rows.length).toFixed(4), " refitted on the late door:", (refit / rows.length).toFixed(4), ` the ${moves} steps the door moved on:`, (surprise / rows.length).toFixed(4));
   (globalThis as any).floors = { now: now / rows.length, late: late / rows.length };
 }
 
